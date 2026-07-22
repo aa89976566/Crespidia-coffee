@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { social } from "@/data/shop";
 
 export const metadata: Metadata = {
   title: "Find us",
@@ -17,8 +18,8 @@ const locations = [
       { day: "Sunday", time: "10am to 5pm" },
       { day: "Monday", time: "Check Instagram" },
     ],
-    map: "https://www.google.com/maps/search/?api=1&query=Crespidia+48+Anerley+Hill+London+SE19+2AE",
-    note: "Right by the park. Good for breakfast, cake and a slow coffee.",
+    map: social.mapsHill,
+    note: "Park side cafe. Breakfast, cakes, flowers and a bright room full of vintage finds.",
   },
   {
     name: "Anerley Road",
@@ -30,8 +31,8 @@ const locations = [
       { day: "Tuesday", time: "8am to 6:30pm" },
       { day: "Wed to Sun", time: "8am to 7:30pm" },
     ],
-    map: "https://maps.app.goo.gl/vqtXvDjrXFaWsiWg6",
-    note: "Coffee and cakes in the day. Drinks later. Dogs welcome.",
+    map: social.mapsRoad,
+    note: "Coffee and cakes in the day. Matcha, cocktails and a quieter evening drink later. Dogs welcome.",
   },
 ];
 
@@ -42,15 +43,23 @@ export default function VisitPage() {
         Find us
       </h1>
       <p className="mt-4 max-w-xl text-lg text-ink-soft">
-        Two shops on Anerley. If a bank holiday is coming up, check Instagram
-        before you set out.
+        Two shops on Anerley. Hours can change on holidays, so a quick look at{" "}
+        <a
+          href={social.instagram}
+          className="font-semibold text-orange-hot underline"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Instagram
+        </a>{" "}
+        helps before you set out.
       </p>
 
       <div className="mt-12 grid gap-8 lg:grid-cols-2">
         {locations.map((loc) => (
           <article
             key={loc.name}
-            className="rounded-[1.75rem] border-2 border-ink/10 bg-white p-6"
+            className="rounded-[1.75rem] border-2 border-orange/50 bg-white p-6 shadow-[0_8px_0_#ffb42944]"
           >
             <h2 className="font-[family-name:var(--font-display)] text-3xl text-ink">
               {loc.name}
@@ -87,16 +96,19 @@ export default function VisitPage() {
               rel="noreferrer"
               className="mt-6 inline-flex rounded-full bg-orange px-5 py-2.5 text-sm font-extrabold text-ink transition hover:bg-yellow"
             >
-              Maps
+              Open in Google Maps
             </a>
           </article>
         ))}
       </div>
 
-      <p className="mt-10 text-sm text-ink-soft">
-        Closest station is Crystal Palace. We are an easy walk from the park
-        gates.
-      </p>
+      <div className="mt-10 rounded-2xl bg-mist px-5 py-5 text-sm text-ink-soft">
+        <p className="font-bold text-ink">Handy to know</p>
+        <p className="mt-2">
+          Short walk from Crystal Palace station and the park gates. Outdoor
+          seating when it is warm. Takeaway coffee and cakes for dog walks.
+        </p>
+      </div>
     </div>
   );
 }

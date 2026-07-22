@@ -17,13 +17,13 @@ export default function RegularsPage() {
         we give you a pastry or bump your drink up.
       </p>
 
-      <div className="mt-10 rounded-[2rem] bg-orange p-8 text-ink">
+      <div className="mt-10 rounded-[2rem] bg-yellow p-8 text-ink shadow-[0_8px_0_#ffb42966]">
         <p className="text-lg leading-relaxed">
           That is it really. Paper card, no app. Works in both shops.
         </p>
         <Link
           href="/visit"
-          className="mt-6 inline-flex rounded-full bg-ink px-5 py-3 text-sm font-bold text-cream hover:bg-ink-soft"
+          className="mt-6 inline-flex rounded-full bg-orange px-5 py-3 text-sm font-extrabold text-ink hover:bg-orange-hot"
         >
           Come get one
         </Link>

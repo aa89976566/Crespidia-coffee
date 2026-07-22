@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { social } from "@/data/shop";
 
 const nav = [
   { href: "/menu", label: "Menu" },
@@ -30,11 +31,19 @@ export function Header() {
               {item.label}
             </Link>
           ))}
+          <a
+            href={social.instagram}
+            target="_blank"
+            rel="noreferrer"
+            className="text-sm font-semibold text-orange-hot transition hover:text-ink"
+          >
+            Instagram
+          </a>
         </nav>
 
         <Link
           href="/visit"
-          className="rounded-full bg-orange px-4 py-2 text-sm font-bold text-ink shadow-[0_4px_0_#07272d22] transition hover:-translate-y-0.5 hover:bg-orange-hot"
+          className="rounded-full bg-orange px-4 py-2 text-sm font-bold text-ink shadow-[0_4px_0_#07272d22] transition hover:-translate-y-0.5 hover:bg-yellow"
         >
           Opening hours
         </Link>

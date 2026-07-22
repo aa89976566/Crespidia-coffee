@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { social } from "@/data/shop";
 
 export function Footer() {
   return (
@@ -9,8 +10,35 @@ export function Footer() {
             Crespidia
           </p>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-cream/80">
-            Coffee and homemade cakes by Crystal Palace Park.
+            Coffee and homemade cakes by Crystal Palace Park. Bright mornings,
+            busy weekends, and a warm hello.
           </p>
+          <div className="mt-4 flex flex-wrap gap-3 text-sm font-semibold">
+            <a
+              href={social.instagram}
+              target="_blank"
+              rel="noreferrer"
+              className="text-yellow hover:text-orange"
+            >
+              Instagram
+            </a>
+            <a
+              href={social.facebook}
+              target="_blank"
+              rel="noreferrer"
+              className="text-yellow hover:text-orange"
+            >
+              Facebook
+            </a>
+            <a
+              href={social.mapsRoad}
+              target="_blank"
+              rel="noreferrer"
+              className="text-yellow hover:text-orange"
+            >
+              Google Maps
+            </a>
+          </div>
         </div>
 
         <div>

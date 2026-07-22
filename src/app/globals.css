@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  /* Warm bakery palette adapted from La Croissanterie brand tokens */
-  --cream: #fff6e5;
-  --cream-deep: #ffe8c2;
-  --orange: #ffa300;
-  --orange-hot: #ff8a00;
-  --yellow: #ffd631;
-  --ink: #07272d;
-  --ink-soft: #2a3f44;
-  --mist: #f0f3f4;
+  /* Brighter warm bakery palette */
+  --cream: #fffaf0;
+  --cream-deep: #ffe9c4;
+  --orange: #ffb429;
+  --orange-hot: #ff9500;
+  --yellow: #ffe566;
+  --ink: #1d2a2e;
+  --ink-soft: #40555b;
+  --mist: #fff3df;
   --white: #ffffff;
   --background: var(--cream);
   --foreground: var(--ink);

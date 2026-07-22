@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { social } from "@/data/shop";
 
 export const metadata: Metadata = {
   title: "Menu",
@@ -8,15 +9,15 @@ export const metadata: Metadata = {
 const sections = [
   {
     title: "Breakfast",
-    note: "Available through the morning.",
+    note: "Through the morning. Popular after park walks.",
     items: [
       {
         name: "Buttermilk pancakes",
-        detail: "With yoghurt, maple and berries",
+        detail: "Yoghurt, maple syrup and berries",
       },
       {
         name: "Eggs on sourdough",
-        detail: "Scrambled or poached. Bacon optional",
+        detail: "Scrambled or poached, bacon if you want",
       },
       {
         name: "Brioche French toast",
@@ -24,21 +25,23 @@ const sections = [
       },
       {
         name: "Sourdough sandwiches",
-        detail: "Ask what fillings we have today",
+        detail: "Ask what is on today",
       },
     ],
   },
   {
-    title: "Cakes",
-    note: "Baked here. The tray changes.",
+    title: "Cakes from the kitchen",
+    note: "Baked here. Guests often take a box home.",
     items: [
+      { name: "Lemon cake", detail: "A local favourite" },
+      { name: "Victoria sponge", detail: "" },
       { name: "Florentine", detail: "" },
       { name: "Blonde brownie", detail: "" },
       { name: "Orange polenta cake", detail: "" },
-      { name: "Coconut macaroon", detail: "" },
+      { name: "Coconut macaroon", detail: "Properly big" },
       {
         name: "Celebration cakes",
-        detail: "Order ahead if you can. Gluten free possible",
+        detail: "Ask Francesca. Gluten free possible",
       },
     ],
   },
@@ -46,12 +49,12 @@ const sections = [
     title: "Drinks",
     note: "Oat, soy, almond or coconut milk available.",
     items: [
-      { name: "Flat white, latte, cappuccino", detail: "" },
-      { name: "Matcha lavender", detail: "" },
-      { name: "Rose mint tea", detail: "Served in a pot" },
+      { name: "Flat white, latte, cappuccino", detail: "Strong and smooth" },
+      { name: "Matcha lavender", detail: "Soft floral note" },
+      { name: "Rose mint tea", detail: "Loose leaf in a pot" },
       {
         name: "Beer, wine and cocktails",
-        detail: "At the Anerley Road shop in the evening",
+        detail: "Later on at Anerley Road",
       },
     ],
   },
@@ -64,8 +67,17 @@ export default function MenuPage() {
         Menu
       </h1>
       <p className="mt-4 text-lg text-ink-soft">
-        A few favourites below. Prices are on the board inside, and we often
-        have something extra on the day.
+        A few things people keep coming back for. Prices are on the board, and
+        the cake tray changes with the day. Fresh photos land on{" "}
+        <a
+          href={social.instagram}
+          className="font-semibold text-orange-hot underline"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Instagram
+        </a>
+        .
       </p>
 
       <div className="mt-12 space-y-12">
@@ -96,8 +108,9 @@ export default function MenuPage() {
         ))}
       </div>
 
-      <p className="mt-12 text-sm text-ink-soft">
-        Allergies or gluten free needs? Tell us when you order and we will help.
+      <p className="mt-12 rounded-2xl bg-mist px-5 py-4 text-sm text-ink-soft">
+        Allergies or gluten free needs? Tell us when you order. We will help if
+        we can.
       </p>
     </div>
   );
