@@ -9,33 +9,29 @@ export function Footer() {
             Crespidia
           </p>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-cream/80">
-            A neighbourhood coffee bakery in Crystal Palace — homemade cakes,
-            proper coffee, and a warm seat by the park.
+            Local coffee bakery by Crystal Palace Park. Come for a flat white,
+            stay for a slice of cake.
           </p>
         </div>
 
         <div>
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-yellow">
-            Visit
-          </p>
+          <p className="text-sm font-bold text-yellow">Where we are</p>
           <ul className="mt-3 space-y-2 text-sm text-cream/85">
             <li>48 Anerley Hill, SE19 2AE</li>
-            <li>51–53 Anerley Road, SE19 2AS</li>
+            <li>51-53 Anerley Road, SE19 2AS</li>
             <li>
               <a
                 className="underline decoration-orange/60 underline-offset-4 hover:text-yellow"
                 href="tel:+442086594986"
               >
-                +44 20 8659 4986
+                020 8659 4986
               </a>
             </li>
           </ul>
         </div>
 
         <div>
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-yellow">
-            Explore
-          </p>
+          <p className="text-sm font-bold text-yellow">Around the site</p>
           <ul className="mt-3 space-y-2 text-sm">
             <li>
               <Link className="hover:text-yellow" href="/menu">
@@ -44,12 +40,12 @@ export function Footer() {
             </li>
             <li>
               <Link className="hover:text-yellow" href="/regulars">
-                Regulars club
+                Stamp card
               </Link>
             </li>
             <li>
               <Link className="hover:text-yellow" href="/about">
-                Our story
+                About
               </Link>
             </li>
             <li>
@@ -72,7 +68,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-cream/10 px-4 py-4 text-center text-xs text-cream/55">
-        © {new Date().getFullYear()} Crespidia · Crystal Palace, London
+        © {new Date().getFullYear()} Crespidia, Crystal Palace
       </div>
     </footer>
   );

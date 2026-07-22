@@ -1,54 +1,51 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Visit",
-  description: "Crespidia locations, opening hours, and how to find us.",
+  title: "Find us",
+  description: "Crespidia on Anerley Hill and Anerley Road, with opening hours.",
 };
 
 const locations = [
   {
     name: "Crespidia",
-    role: "Coffee bakery",
+    role: "By the park",
     address: "48 Anerley Hill, London SE19 2AE",
-    phone: "+44 20 8659 4986",
+    phone: "020 8659 4986",
     phoneHref: "tel:+442086594986",
     hours: [
-      { day: "Tuesday – Friday", time: "9:00 – 17:00" },
-      { day: "Saturday", time: "9:00 – 17:00" },
-      { day: "Sunday", time: "10:00 – 17:00" },
-      { day: "Monday", time: "Please check Instagram" },
+      { day: "Tue to Fri", time: "9am to 5pm" },
+      { day: "Saturday", time: "9am to 5pm" },
+      { day: "Sunday", time: "10am to 5pm" },
+      { day: "Monday", time: "Check Instagram" },
     ],
     map: "https://www.google.com/maps/search/?api=1&query=Crespidia+48+Anerley+Hill+London+SE19+2AE",
-    note: "Near Crystal Palace Park — vintage room, cakes, breakfast, gifts & plants.",
+    note: "The original shop near Crystal Palace Park. Vintage bits everywhere, cakes on the counter, plants and little gifts if you fancy a browse.",
   },
   {
-    name: "Crespidia Coffee & Bar",
-    role: "Coffee · bakery · evening drinks",
-    address: "51–53 Anerley Road, London SE19 2AS",
-    phone: "+44 7840 318007",
+    name: "Crespidia Coffee and Bar",
+    role: "On Anerley Road",
+    address: "51-53 Anerley Road, London SE19 2AS",
+    phone: "07840 318007",
     phoneHref: "tel:+447840318007",
     hours: [
-      { day: "Monday", time: "8:00 – 17:00" },
-      { day: "Tuesday", time: "8:00 – 18:30" },
-      { day: "Wed – Sun", time: "8:00 – 19:30" },
+      { day: "Monday", time: "8am to 5pm" },
+      { day: "Tuesday", time: "8am to 6:30pm" },
+      { day: "Wed to Sun", time: "8am to 7:30pm" },
     ],
     map: "https://maps.app.goo.gl/vqtXvDjrXFaWsiWg6",
-    note: "Quiet laptop mornings, cakes & pastries, cocktails later. Dog-friendly.",
+    note: "Handy for a laptop morning or a pastry on the way through. Later on we do drinks too. Dogs are fine.",
   },
 ];
 
 export default function VisitPage() {
   return (
     <div className="mx-auto max-w-5xl px-4 py-14 sm:px-6">
-      <p className="text-xs font-bold uppercase tracking-[0.22em] text-orange-hot">
+      <h1 className="font-[family-name:var(--font-display)] text-5xl text-ink">
         Find us
-      </p>
-      <h1 className="mt-2 font-[family-name:var(--font-display)] text-5xl text-ink">
-        Visit
       </h1>
       <p className="mt-4 max-w-2xl text-lg text-ink-soft">
-        Two Crespidia spots under the same welcoming owners. Hours can change
-        for holidays — when in doubt, message us on Instagram.
+        Two shops, same people. Hours shift a bit on holidays, so if you are
+        unsure just drop us a message on Instagram.
       </p>
 
       <div className="mt-12 grid gap-8 lg:grid-cols-2">
@@ -57,9 +54,7 @@ export default function VisitPage() {
             key={loc.name}
             className="rounded-[1.75rem] border-2 border-ink/10 bg-white p-6 shadow-[0_8px_0_#ffa30033]"
           >
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-orange-hot">
-              {loc.role}
-            </p>
+            <p className="text-sm font-semibold text-orange-hot">{loc.role}</p>
             <h2 className="mt-2 font-[family-name:var(--font-display)] text-3xl text-ink">
               {loc.name}
             </h2>
@@ -104,8 +99,8 @@ export default function VisitPage() {
       <div className="mt-10 rounded-2xl bg-cream-deep px-5 py-5 text-sm text-ink-soft">
         <p className="font-bold text-ink">Getting here</p>
         <p className="mt-1">
-          Short walk from Crystal Palace station and the park gates. Perfect
-          after a dog walk — we’re dog-friendly inside and for takeaway.
+          Short walk from Crystal Palace station and the park gates. Plenty of
+          people swing by after a dog walk.
         </p>
       </div>
     </div>

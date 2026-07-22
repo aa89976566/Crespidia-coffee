@@ -2,57 +2,56 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Menu",
-  description:
-    "Breakfast, brunch, homemade cakes, coffee, and drinks at Crespidia.",
+  description: "Breakfast, homemade cakes and coffee at Crespidia.",
 };
 
 const sections = [
   {
-    title: "Breakfast & brunch",
-    note: "Served through the morning — ask for today’s specials.",
+    title: "Breakfast and brunch",
+    note: "Through the morning. Ask what specials we have on.",
     items: [
       {
         name: "Buttermilk pancakes",
-        detail: "Natural yoghurt, maple syrup & berries",
+        detail: "Yoghurt, maple syrup and berries",
       },
       {
         name: "Eggs on sourdough",
-        detail: "Scrambled or poached, with crispy bacon if you like",
+        detail: "Scrambled or poached, bacon if you want it",
       },
       {
         name: "Brioche French toast",
-        detail: "Bacon, banana & maple syrup",
+        detail: "Bacon, banana and maple",
       },
       {
         name: "Sourdough sandwiches",
-        detail: "Including beef, gherkin & mustard mayo",
+        detail: "Including the beef, gherkin and mustard mayo one people keep ordering",
       },
     ],
   },
   {
-    title: "Homemade bakery",
-    note: "Tray bakes change with the day — gluten-free options available.",
+    title: "Homemade cakes",
+    note: "Changes with the day. We usually have gluten free options too.",
     items: [
-      { name: "Florentine", detail: "Crisp, nutty, take-home favourite" },
-      { name: "Blonde brownie", detail: "Soft centre, golden top" },
-      { name: "Orange polenta cake", detail: "Bright and fragrant" },
-      { name: "Coconut macaroon", detail: "Generously sized" },
+      { name: "Florentine", detail: "Crisp and nutty" },
+      { name: "Blonde brownie", detail: "Soft in the middle" },
+      { name: "Orange polenta cake", detail: "Nice with a coffee" },
+      { name: "Coconut macaroon", detail: "Properly big" },
       {
         name: "Celebration cakes",
-        detail: "Including gluten-free red velvet — ask Francesca",
+        detail: "Ask us. We can do gluten free red velvet too",
       },
     ],
   },
   {
-    title: "Coffee & drinks",
-    note: "Oat, soy, almond & coconut milk available.",
+    title: "Coffee and drinks",
+    note: "Oat, soy, almond or coconut milk is fine.",
     items: [
-      { name: "Flat white / latte / cappuccino", detail: "Strong and smooth" },
-      { name: "Matcha lavender", detail: "Subtle floral finish" },
-      { name: "Rose mint tea", detail: "Loose leaf, served in a pot" },
+      { name: "Flat white, latte, cappuccino", detail: "As you like it" },
+      { name: "Matcha lavender", detail: "Gentle floral note" },
+      { name: "Rose mint tea", detail: "Loose leaf, in a pot" },
       {
-        name: "Cocktails, beer & wine",
-        detail: "Evenings at Anerley Road Coffee & Bar",
+        name: "Cocktails, beer and wine",
+        detail: "Later on at the Anerley Road shop",
       },
     ],
   },
@@ -61,15 +60,13 @@ const sections = [
 export default function MenuPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-14 sm:px-6">
-      <p className="text-xs font-bold uppercase tracking-[0.22em] text-orange-hot">
-        Our carte
-      </p>
-      <h1 className="mt-2 font-[family-name:var(--font-display)] text-5xl text-ink">
+      <h1 className="font-[family-name:var(--font-display)] text-5xl text-ink">
         Menu
       </h1>
       <p className="mt-4 max-w-2xl text-lg text-ink-soft">
-        A neighbourhood menu built around homemade bakery, proper coffee, and
-        comforting breakfast plates. Prices and daily specials in store.
+        Homemade cakes, breakfast plates and a decent coffee. Prices are on the
+        board in the shop, and specials change when we feel like baking
+        something new.
       </p>
 
       <div className="mt-12 space-y-12">
@@ -99,8 +96,8 @@ export default function MenuPage() {
       </div>
 
       <p className="mt-12 rounded-2xl bg-cream-deep px-5 py-4 text-sm text-ink-soft">
-        Vegetarian, vegan, and gluten-free options available — please tell us
-        about allergies when you order. We love looking after special requests.
+        If you have an allergy or need something gluten free, just tell us when
+        you order. We will sort it out.
       </p>
     </div>
   );

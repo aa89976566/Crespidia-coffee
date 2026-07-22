@@ -3,63 +3,49 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Cookies",
-  description: "Cookie policy for the Crespidia website.",
+  description: "How cookies work on the Crespidia website.",
 };
 
 export default function CookiesPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
-      <p className="text-xs font-bold uppercase tracking-[0.22em] text-orange-hot">
-        Legal
-      </p>
-      <h1 className="mt-2 font-[family-name:var(--font-display)] text-5xl text-ink">
+      <h1 className="font-[family-name:var(--font-display)] text-5xl text-ink">
         Cookies
       </h1>
       <p className="mt-4 text-lg text-ink-soft">
-        This page explains how the Crespidia website uses cookies. Structure
-        and clarity take cues from bakery brand practices such as{" "}
-        <a
-          href="https://www.lacroissanterie.fr/votre-espace-fidelite/presentation/"
-          className="font-semibold text-orange-hot underline underline-offset-4"
-          target="_blank"
-          rel="noreferrer"
-        >
-          La Croissanterie’s loyalty presentation
-        </a>{" "}
-        and their site footer cookie/legal pattern.
+        A short note on how this website uses cookies. Nothing complicated.
       </p>
 
       <div className="mt-10 space-y-8 text-ink-soft">
         <section>
           <h2 className="font-[family-name:var(--font-display)] text-2xl text-ink">
-            Essential cookies
+            Essential ones
           </h2>
           <p className="mt-2 leading-relaxed">
-            Needed for basic site functions — for example remembering your
-            cookie preference so we do not ask every time.
+            These keep basic things working, like remembering whether you
+            already answered the cookie banner.
           </p>
         </section>
 
         <section>
           <h2 className="font-[family-name:var(--font-display)] text-2xl text-ink">
-            Optional cookies
+            Optional ones
           </h2>
           <p className="mt-2 leading-relaxed">
-            Help us understand visits (which pages neighbours open most). These
-            are only used if you choose “Accept all” on the banner.
+            Only if you say yes. They help us see which pages people open most,
+            so we know if the menu page is doing its job.
           </p>
         </section>
 
         <section>
           <h2 className="font-[family-name:var(--font-display)] text-2xl text-ink">
-            Your choices
+            Changing your mind
           </h2>
           <p className="mt-2 leading-relaxed">
-            You can accept all cookies or keep essential only. Clear site data
-            in your browser to reset the banner. For questions, contact us via
-            the phone numbers on the{" "}
+            Clear this site&apos;s data in your browser and the banner comes
+            back. Questions? Call the numbers on the{" "}
             <Link href="/visit" className="font-semibold text-orange-hot underline">
-              Visit
+              Find us
             </Link>{" "}
             page.
           </p>
