@@ -42,11 +42,15 @@ npm start
 
 ## Live site
 
-**Preview (Cloudflare Tunnel):** https://connections-tool-mean-brothers.trycloudflare.com/
+**Published:** https://aa89976566.github.io/Crespidia-coffee/
 
-### Permanent GitHub Pages (one-time setup)
+GitHub Pages is enabled from the `gh-pages` branch (`status: built`).
 
-1. Open https://github.com/aa89976566/Crespidia-coffee/settings/pages
-2. Under **Build and deployment → Source**, choose **Deploy from a branch**
-3. Branch: **`gh-pages`** / folder **`/` (root)** → Save
-4. Site URL will be: https://aa89976566.github.io/Crespidia-coffee/
+### Republish after content changes
+
+```bash
+GITHUB_PAGES=true npm run build
+# then push the contents of ./out to the gh-pages branch
+```
+
+Or merge to `main` / push the feature branch to trigger `.github/workflows/deploy-pages.yml` (GitHub Actions Pages).
