@@ -19,14 +19,13 @@ const body = Nunito({
 
 export const metadata: Metadata = {
   title: {
-    default: "Crespidia | Coffee and bakery in Crystal Palace",
+    default: "Crespidia | Crystal Palace",
     template: "%s | Crespidia",
   },
-  description:
-    "Neighbourhood coffee bakery on Anerley. Homemade cakes, breakfast, coffee, and a seat near the park.",
+  description: "Coffee and homemade cakes on Anerley, near Crystal Palace Park.",
   openGraph: {
     title: "Crespidia",
-    description: "Coffee, cakes and breakfast in Crystal Palace.",
+    description: "Coffee and homemade cakes near Crystal Palace Park.",
     locale: "en_GB",
     type: "website",
   },

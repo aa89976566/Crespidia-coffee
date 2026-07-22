@@ -4,7 +4,7 @@ const nav = [
   { href: "/menu", label: "Menu" },
   { href: "/visit", label: "Find us" },
   { href: "/about", label: "About" },
-  { href: "/regulars", label: "Stamp card" },
+  { href: "/regulars", label: "Stamps" },
 ];
 
 export function Header() {

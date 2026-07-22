@@ -4,65 +4,50 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "A bit about Crespidia in Crystal Palace.",
+  description: "About Crespidia in Crystal Palace.",
 };
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto max-w-5xl px-4 py-14 sm:px-6">
-      <div className="grid items-center gap-10 md:grid-cols-2">
-        <div>
-          <h1 className="font-[family-name:var(--font-display)] text-5xl text-ink">
-            About Crespidia
-          </h1>
-          <p className="mt-5 text-lg leading-relaxed text-ink-soft">
-            We are a small independent coffee bakery in Crystal Palace. The
-            tables do not match, the cups are china, and people seem to like
-            hanging around.
-          </p>
-          <p className="mt-4 leading-relaxed text-ink-soft">
-            Neighbours often mention the little things. Tea in a pot. Jam made
-            by the owner&apos;s mum in Turkey. Cakes baked here, including
-            gluten free ones when someone needs a birthday cake. It is London
-            with a bit of home cooking mixed in.
-          </p>
-        </div>
+    <div className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
+      <h1 className="font-[family-name:var(--font-display)] text-5xl text-ink">
+        About us
+      </h1>
+      <p className="mt-5 text-lg leading-relaxed text-ink-soft">
+        Crespidia is a small coffee bakery in Crystal Palace. We bake, we make
+        coffee, and we try to make the place feel easy to be in.
+      </p>
+      <p className="mt-4 leading-relaxed text-ink-soft">
+        A lot of what we do comes from home. Family recipes, jam from Turkey,
+        cakes made in our kitchen rather than bought in. If you need gluten
+        free, ask. We often can help.
+      </p>
 
-        <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-cream-deep">
-          <Image
-            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80"
-            alt="Cafe tables and warm light"
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
-        </div>
+      <div className="relative mt-10 aspect-[16/10] overflow-hidden rounded-[2rem] bg-cream-deep">
+        <Image
+          src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80"
+          alt="Inside the cafe"
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
       </div>
 
-      <div className="mt-14 max-w-3xl space-y-6 text-ink-soft">
-        <p>
-          Most days you will find dog walkers from the park, people with
-          laptops, and weekend brunch tables that fill up without much fuss.
-          We sell bread and plants sometimes too, when we have them.
-        </p>
-        <p>
-          Anerley Hill is the cosier cafe room. Anerley Road is coffee through
-          the day and a quieter drink later on. Either way, say hello when you
-          come in.
-        </p>
-      </div>
+      <p className="mt-8 leading-relaxed text-ink-soft">
+        You will see dog walkers, people with laptops, and weekend tables full
+        of breakfast. We also put out bread, plants and bits and pieces when we
+        have them.
+      </p>
+      <p className="mt-4 leading-relaxed text-ink-soft">
+        Come say hello next time you are nearby.
+      </p>
 
-      <div className="mt-14 rounded-[2rem] bg-orange px-6 py-10 sm:px-10">
-        <h2 className="font-[family-name:var(--font-display)] text-3xl text-ink sm:text-4xl">
-          Come by when you are near the park
-        </h2>
-        <Link
-          href="/visit"
-          className="mt-5 inline-flex rounded-full bg-ink px-6 py-3 text-sm font-bold text-cream hover:bg-ink-soft"
-        >
-          See where we are
-        </Link>
-      </div>
+      <Link
+        href="/visit"
+        className="mt-8 inline-flex rounded-full bg-orange px-6 py-3 text-sm font-bold text-ink hover:bg-yellow"
+      >
+        Opening hours and addresses
+      </Link>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Cookies",
-  description: "How cookies work on the Crespidia website.",
+  description: "Cookies on the Crespidia website.",
 };
 
 export default function CookiesPage() {
@@ -13,43 +13,27 @@ export default function CookiesPage() {
         Cookies
       </h1>
       <p className="mt-4 text-lg text-ink-soft">
-        A short note on how this website uses cookies. Nothing complicated.
+        We use a few cookies so the site works. Optional ones only if you say
+        yes.
       </p>
 
-      <div className="mt-10 space-y-8 text-ink-soft">
-        <section>
-          <h2 className="font-[family-name:var(--font-display)] text-2xl text-ink">
-            Essential ones
-          </h2>
-          <p className="mt-2 leading-relaxed">
-            These keep basic things working, like remembering whether you
-            already answered the cookie banner.
-          </p>
-        </section>
-
-        <section>
-          <h2 className="font-[family-name:var(--font-display)] text-2xl text-ink">
-            Optional ones
-          </h2>
-          <p className="mt-2 leading-relaxed">
-            Only if you say yes. They help us see which pages people open most,
-            so we know if the menu page is doing its job.
-          </p>
-        </section>
-
-        <section>
-          <h2 className="font-[family-name:var(--font-display)] text-2xl text-ink">
-            Changing your mind
-          </h2>
-          <p className="mt-2 leading-relaxed">
-            Clear this site&apos;s data in your browser and the banner comes
-            back. Questions? Call the numbers on the{" "}
-            <Link href="/visit" className="font-semibold text-orange-hot underline">
-              Find us
-            </Link>{" "}
-            page.
-          </p>
-        </section>
+      <div className="mt-10 space-y-6 text-ink-soft">
+        <p>
+          <strong className="text-ink">Essential:</strong> things like
+          remembering your cookie choice.
+        </p>
+        <p>
+          <strong className="text-ink">Optional:</strong> help us see which
+          pages get visits.
+        </p>
+        <p>
+          Clear this site in your browser settings if you want the banner
+          again. Or ring us using the numbers on{" "}
+          <Link href="/visit" className="font-semibold text-orange-hot underline">
+            Find us
+          </Link>
+          .
+        </p>
       </div>
     </div>
   );

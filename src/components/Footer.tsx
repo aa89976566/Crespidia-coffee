@@ -9,13 +9,12 @@ export function Footer() {
             Crespidia
           </p>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-cream/80">
-            Local coffee bakery by Crystal Palace Park. Come for a flat white,
-            stay for a slice of cake.
+            Coffee and homemade cakes by Crystal Palace Park.
           </p>
         </div>
 
         <div>
-          <p className="text-sm font-bold text-yellow">Where we are</p>
+          <p className="text-sm font-bold text-yellow">Find us</p>
           <ul className="mt-3 space-y-2 text-sm text-cream/85">
             <li>48 Anerley Hill, SE19 2AE</li>
             <li>51-53 Anerley Road, SE19 2AS</li>
@@ -31,7 +30,7 @@ export function Footer() {
         </div>
 
         <div>
-          <p className="text-sm font-bold text-yellow">Around the site</p>
+          <p className="text-sm font-bold text-yellow">Links</p>
           <ul className="mt-3 space-y-2 text-sm">
             <li>
               <Link className="hover:text-yellow" href="/menu">
@@ -40,7 +39,7 @@ export function Footer() {
             </li>
             <li>
               <Link className="hover:text-yellow" href="/regulars">
-                Stamp card
+                Stamps
               </Link>
             </li>
             <li>
@@ -52,16 +51,6 @@ export function Footer() {
               <Link className="hover:text-yellow" href="/cookies">
                 Cookies
               </Link>
-            </li>
-            <li>
-              <a
-                className="hover:text-yellow"
-                href="https://www.instagram.com/"
-                rel="noreferrer"
-                target="_blank"
-              >
-                Instagram
-              </a>
             </li>
           </ul>
         </div>

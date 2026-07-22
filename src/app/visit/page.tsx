@@ -2,14 +2,13 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Find us",
-  description: "Crespidia on Anerley Hill and Anerley Road, with opening hours.",
+  description: "Crespidia opening hours and addresses in Crystal Palace.",
 };
 
 const locations = [
   {
-    name: "Crespidia",
-    role: "By the park",
-    address: "48 Anerley Hill, London SE19 2AE",
+    name: "Anerley Hill",
+    address: "48 Anerley Hill, SE19 2AE",
     phone: "020 8659 4986",
     phoneHref: "tel:+442086594986",
     hours: [
@@ -19,12 +18,11 @@ const locations = [
       { day: "Monday", time: "Check Instagram" },
     ],
     map: "https://www.google.com/maps/search/?api=1&query=Crespidia+48+Anerley+Hill+London+SE19+2AE",
-    note: "The original shop near Crystal Palace Park. Vintage bits everywhere, cakes on the counter, plants and little gifts if you fancy a browse.",
+    note: "Right by the park. Good for breakfast, cake and a slow coffee.",
   },
   {
-    name: "Crespidia Coffee and Bar",
-    role: "On Anerley Road",
-    address: "51-53 Anerley Road, London SE19 2AS",
+    name: "Anerley Road",
+    address: "51-53 Anerley Road, SE19 2AS",
     phone: "07840 318007",
     phoneHref: "tel:+447840318007",
     hours: [
@@ -33,7 +31,7 @@ const locations = [
       { day: "Wed to Sun", time: "8am to 7:30pm" },
     ],
     map: "https://maps.app.goo.gl/vqtXvDjrXFaWsiWg6",
-    note: "Handy for a laptop morning or a pastry on the way through. Later on we do drinks too. Dogs are fine.",
+    note: "Coffee and cakes in the day. Drinks later. Dogs welcome.",
   },
 ];
 
@@ -43,19 +41,18 @@ export default function VisitPage() {
       <h1 className="font-[family-name:var(--font-display)] text-5xl text-ink">
         Find us
       </h1>
-      <p className="mt-4 max-w-2xl text-lg text-ink-soft">
-        Two shops, same people. Hours shift a bit on holidays, so if you are
-        unsure just drop us a message on Instagram.
+      <p className="mt-4 max-w-xl text-lg text-ink-soft">
+        Two shops on Anerley. If a bank holiday is coming up, check Instagram
+        before you set out.
       </p>
 
       <div className="mt-12 grid gap-8 lg:grid-cols-2">
         {locations.map((loc) => (
           <article
             key={loc.name}
-            className="rounded-[1.75rem] border-2 border-ink/10 bg-white p-6 shadow-[0_8px_0_#ffa30033]"
+            className="rounded-[1.75rem] border-2 border-ink/10 bg-white p-6"
           >
-            <p className="text-sm font-semibold text-orange-hot">{loc.role}</p>
-            <h2 className="mt-2 font-[family-name:var(--font-display)] text-3xl text-ink">
+            <h2 className="font-[family-name:var(--font-display)] text-3xl text-ink">
               {loc.name}
             </h2>
             <p className="mt-3 text-ink-soft">{loc.note}</p>
@@ -90,19 +87,16 @@ export default function VisitPage() {
               rel="noreferrer"
               className="mt-6 inline-flex rounded-full bg-orange px-5 py-2.5 text-sm font-extrabold text-ink transition hover:bg-yellow"
             >
-              Open in Maps
+              Maps
             </a>
           </article>
         ))}
       </div>
 
-      <div className="mt-10 rounded-2xl bg-cream-deep px-5 py-5 text-sm text-ink-soft">
-        <p className="font-bold text-ink">Getting here</p>
-        <p className="mt-1">
-          Short walk from Crystal Palace station and the park gates. Plenty of
-          people swing by after a dog walk.
-        </p>
-      </div>
+      <p className="mt-10 text-sm text-ink-soft">
+        Closest station is Crystal Palace. We are an easy walk from the park
+        gates.
+      </p>
     </div>
   );
 }
