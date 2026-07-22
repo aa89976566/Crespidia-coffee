@@ -38,3 +38,15 @@ Open [http://localhost:3000](http://localhost:3000).
 npm run build
 npm start
 ```
+
+
+## Live site
+
+**Preview (Cloudflare Tunnel):** https://connections-tool-mean-brothers.trycloudflare.com/
+
+### Permanent GitHub Pages (one-time setup)
+
+1. Open https://github.com/aa89976566/Crespidia-coffee/settings/pages
+2. Under **Build and deployment → Source**, choose **Deploy from a branch**
+3. Branch: **`gh-pages`** / folder **`/` (root)** → Save
+4. Site URL will be: https://aa89976566.github.io/Crespidia-coffee/
