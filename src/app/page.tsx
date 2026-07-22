@@ -1,18 +1,16 @@
 import Link from "next/link";
-import Image from "next/image";
 import { gallery, neighbourNotes, goodToKnow, social } from "@/data/shop";
+import { asset } from "@/lib/asset";
 
 export default function HomePage() {
   return (
     <>
       <section className="relative min-h-[86vh] overflow-hidden bg-cream-deep">
-        <Image
-          src="/photos/ta-1.jpg"
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={asset("/photos/ta-1.jpg")}
           alt="Inside Crespidia"
-          fill
-          priority
-          className="hero-media object-cover"
-          sizes="100vw"
+          className="hero-media absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#1d2a2ecc] via-[#1d2a2e66] to-[#ffb42922]" />
 
@@ -20,7 +18,7 @@ export default function HomePage() {
           <p className="animate-rise text-sm font-bold text-yellow">
             Crystal Palace Park end of Anerley
           </p>
-          <h1 className="animate-rise-delay mt-2 font-[family-name:var(--font-display)] text-5xl leading-[1.05] text-cream sm:text-6xl md:text-7xl">
+          <h1 className="animate-rise-delay mt-2 font-display text-5xl leading-[1.05] text-cream sm:text-6xl md:text-7xl">
             Crespidia
           </h1>
           <p className="animate-rise-delay-2 mt-4 max-w-lg text-lg text-cream sm:text-xl">
@@ -55,13 +53,13 @@ export default function HomePage() {
       <section className="bg-yellow">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-5 text-sm font-extrabold text-ink sm:px-6">
           <p>About 4.9 on Google from neighbours</p>
-          <p>Dogs welcome · cakes baked here · two shops on Anerley</p>
+          <p>Dogs welcome, cakes baked here, two shops on Anerley</p>
         </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div className="max-w-2xl">
-          <h2 className="font-[family-name:var(--font-display)] text-4xl text-ink">
+          <h2 className="font-display text-4xl text-ink">
             Come for cake. Stay for a chat.
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-ink-soft">
@@ -87,9 +85,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <h2 className="font-[family-name:var(--font-display)] text-4xl text-ink">
-                A peek inside
-              </h2>
+              <h2 className="font-display text-4xl text-ink">A peek inside</h2>
               <p className="mt-2 text-ink-soft">
                 Photos from guest visits and sunny bakery mornings. More on our
                 Instagram.
@@ -111,12 +107,12 @@ export default function HomePage() {
                 key={shot.src}
                 className="relative aspect-square overflow-hidden rounded-2xl bg-cream-deep"
               >
-                <Image
-                  src={shot.src}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={asset(shot.src)}
                   alt={shot.alt}
-                  fill
-                  className="object-cover transition duration-500 hover:scale-105"
-                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="h-full w-full object-cover transition duration-500 hover:scale-105"
+                  loading="lazy"
                 />
               </figure>
             ))}
@@ -125,16 +121,16 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-        <h2 className="font-[family-name:var(--font-display)] text-4xl text-ink">
-          What neighbours say
-        </h2>
+        <h2 className="font-display text-4xl text-ink">What neighbours say</h2>
         <div className="mt-8 grid gap-5 md:grid-cols-2">
           {neighbourNotes.map((note) => (
             <blockquote
               key={note.text}
               className="rounded-3xl border border-orange/40 bg-white p-5 shadow-[0_6px_0_#ffb42955]"
             >
-              <p className="text-base leading-relaxed text-ink">&ldquo;{note.text}&rdquo;</p>
+              <p className="text-base leading-relaxed text-ink">
+                &ldquo;{note.text}&rdquo;
+              </p>
               <footer className="mt-3 text-sm font-semibold text-orange-hot">
                 {note.about}
               </footer>
@@ -146,7 +142,7 @@ export default function HomePage() {
       <section className="bg-orange">
         <div className="mx-auto grid max-w-6xl gap-8 px-4 py-14 sm:px-6 md:grid-cols-2 md:items-center">
           <div>
-            <h2 className="font-[family-name:var(--font-display)] text-4xl text-ink">
+            <h2 className="font-display text-4xl text-ink">
               Weekends get lively
             </h2>
             <p className="mt-4 text-lg text-ink/90">
@@ -175,12 +171,12 @@ export default function HomePage() {
             </div>
           </div>
           <div className="relative min-h-72 overflow-hidden rounded-[2rem]">
-            <Image
-              src="/photos/ta-0.jpg"
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={asset("/photos/ta-0.jpg")}
               alt="Crespidia plate"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              className="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
             />
           </div>
         </div>
@@ -188,9 +184,7 @@ export default function HomePage() {
 
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div className="overflow-hidden rounded-[2rem] bg-ink px-6 py-12 text-cream sm:px-10">
-          <h2 className="font-[family-name:var(--font-display)] text-4xl">
-            Two bright spots on Anerley
-          </h2>
+          <h2 className="font-display text-4xl">Two bright spots on Anerley</h2>
           <p className="mt-3 max-w-2xl text-cream/85">
             Anerley Hill for the park side cafe. Anerley Road for coffee through
             the day and drinks later. Same baking, same welcome.

@@ -13,7 +13,7 @@ export function Header() {
     <header className="sticky top-0 z-40 border-b border-ink/10 bg-cream/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <Link href="/" className="flex flex-col leading-none">
-          <span className="font-[family-name:var(--font-display)] text-2xl tracking-tight text-ink sm:text-3xl">
+          <span className="font-display text-2xl tracking-tight text-ink sm:text-3xl">
             Crespidia
           </span>
           <span className="mt-0.5 text-xs text-ink-soft">

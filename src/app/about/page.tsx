@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { locations, social } from "@/data/shop";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "About",
@@ -14,10 +14,10 @@ export default function AboutPage() {
       <section className="relative overflow-hidden bg-cream">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,176,64,0.35),transparent_45%),radial-gradient(circle_at_85%_10%,rgba(255,122,26,0.2),transparent_40%)]" />
         <div className="relative mx-auto max-w-3xl px-4 py-16 sm:px-6 md:py-20">
-          <p className="font-[family-name:var(--font-display)] text-4xl font-bold tracking-tight text-orange-hot md:text-5xl">
+          <p className="font-display text-4xl font-bold tracking-tight text-orange-hot md:text-5xl">
             Crespidia
           </p>
-          <h1 className="mt-4 font-[family-name:var(--font-display)] text-3xl font-bold tracking-tight text-ink md:text-4xl">
+          <h1 className="mt-4 font-display text-3xl font-bold tracking-tight text-ink md:text-4xl">
             A family bakery in Crystal Palace
           </h1>
           <p className="mt-5 text-lg leading-relaxed text-ink-soft">
@@ -32,7 +32,7 @@ export default function AboutPage() {
       <section className="border-y border-orange/30 bg-mist">
         <div className="mx-auto grid max-w-5xl gap-8 px-4 py-14 sm:px-6 md:grid-cols-2 md:items-center">
           <div>
-            <h2 className="font-[family-name:var(--font-display)] text-3xl font-bold text-ink">
+            <h2 className="font-display text-3xl font-bold text-ink">
               Francesca and the family
             </h2>
             <p className="mt-4 leading-relaxed text-ink-soft">
@@ -47,12 +47,12 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="relative h-72 overflow-hidden rounded-xl shadow-[0_8px_0_#ffb42944] ring-4 ring-white md:h-80">
-            <Image
-              src="/photos/crespidia-fb.jpg"
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={asset("/photos/crespidia-fb.jpg")}
               alt="Crespidia Coffee Bakery"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              className="h-full w-full object-cover"
+              loading="lazy"
             />
           </div>
         </div>
@@ -60,7 +60,7 @@ export default function AboutPage() {
 
       <section className="bg-cream">
         <div className="mx-auto max-w-5xl px-4 py-14 sm:px-6">
-          <h2 className="font-[family-name:var(--font-display)] text-3xl font-bold text-ink">
+          <h2 className="font-display text-3xl font-bold text-ink">
             Two shops
           </h2>
           <div className="mt-8 grid gap-5 md:grid-cols-2">
@@ -72,7 +72,7 @@ export default function AboutPage() {
                 <p className="text-xs font-bold uppercase tracking-[0.14em] text-orange-hot">
                   {loc.kind}
                 </p>
-                <h3 className="mt-2 font-[family-name:var(--font-display)] text-2xl font-bold text-ink">
+                <h3 className="mt-2 font-display text-2xl font-bold text-ink">
                   {loc.name}
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-ink-soft">
@@ -89,7 +89,7 @@ export default function AboutPage() {
 
       <section className="border-y border-orange/30 bg-white">
         <div className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
-          <h2 className="font-[family-name:var(--font-display)] text-3xl font-bold text-ink">
+          <h2 className="font-display text-3xl font-bold text-ink">
             What guests notice
           </h2>
           <ul className="mt-6 space-y-3 text-ink-soft">

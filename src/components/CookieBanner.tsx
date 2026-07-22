@@ -32,7 +32,7 @@ export function CookieBanner() {
       aria-label="Cookie preferences"
       className="fixed inset-x-3 bottom-3 z-50 mx-auto max-w-xl rounded-2xl border border-ink/10 bg-white p-4 shadow-xl sm:inset-x-auto sm:right-4 sm:bottom-4"
     >
-      <p className="font-[family-name:var(--font-display)] text-lg text-ink">
+      <p className="font-display text-lg text-ink">
         Cookies
       </p>
       <p className="mt-2 text-sm leading-relaxed text-ink-soft">

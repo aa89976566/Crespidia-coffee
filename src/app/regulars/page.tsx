@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function RegularsPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
-      <h1 className="font-[family-name:var(--font-display)] text-5xl text-ink">
+      <h1 className="font-display text-5xl text-ink">
         Stamp card
       </h1>
       <p className="mt-4 text-lg text-ink-soft">

@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="mt-20 border-t border-ink/10 bg-ink text-cream">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3">
         <div>
-          <p className="font-[family-name:var(--font-display)] text-3xl">
+          <p className="font-display text-3xl">
             Crespidia
           </p>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-cream/80">

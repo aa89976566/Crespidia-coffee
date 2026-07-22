@@ -39,7 +39,7 @@ const locations = [
 export default function VisitPage() {
   return (
     <div className="mx-auto max-w-5xl px-4 py-14 sm:px-6">
-      <h1 className="font-[family-name:var(--font-display)] text-5xl text-ink">
+      <h1 className="font-display text-5xl text-ink">
         Find us
       </h1>
       <p className="mt-4 max-w-xl text-lg text-ink-soft">
@@ -61,7 +61,7 @@ export default function VisitPage() {
             key={loc.name}
             className="rounded-[1.75rem] border-2 border-orange/50 bg-white p-6 shadow-[0_8px_0_#ffb42944]"
           >
-            <h2 className="font-[family-name:var(--font-display)] text-3xl text-ink">
+            <h2 className="font-display text-3xl text-ink">
               {loc.name}
             </h2>
             <p className="mt-3 text-ink-soft">{loc.note}</p>

@@ -63,7 +63,7 @@ const sections = [
 export default function MenuPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
-      <h1 className="font-[family-name:var(--font-display)] text-5xl text-ink">
+      <h1 className="font-display text-5xl text-ink">
         Menu
       </h1>
       <p className="mt-4 text-lg text-ink-soft">
@@ -84,7 +84,7 @@ export default function MenuPage() {
         {sections.map((section) => (
           <section key={section.title}>
             <div className="border-b-2 border-orange pb-3">
-              <h2 className="font-[family-name:var(--font-display)] text-3xl text-ink">
+              <h2 className="font-display text-3xl text-ink">
                 {section.title}
               </h2>
               <p className="mt-1 text-sm text-ink-soft">{section.note}</p>

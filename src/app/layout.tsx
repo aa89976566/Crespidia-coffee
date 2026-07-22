@@ -6,13 +6,13 @@ import { CookieBanner } from "@/components/CookieBanner";
 import "./globals.css";
 
 const display = Fraunces({
-  variable: "--font-display",
+  variable: "--font-fraunces",
   subsets: ["latin"],
   weight: ["500", "600", "700"],
 });
 
 const body = Nunito({
-  variable: "--font-body",
+  variable: "--font-nunito",
   subsets: ["latin"],
   weight: ["400", "600", "700", "800"],
 });
