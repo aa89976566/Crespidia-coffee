@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  /* La Croissanterie–inspired palette, softened for Crespidia */
+  /* Warm bakery palette adapted from La Croissanterie brand tokens */
   --cream: #fff6e5;
   --cream-deep: #ffe8c2;
   --orange: #ffa300;
