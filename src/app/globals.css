@@ -99,6 +99,105 @@ body {
   animation: float-y 4s ease-in-out infinite;
 }
 
+/* Scrapbook note cards (tilted sticky-note style) */
+.note-board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem 0.75rem;
+  padding: 1.25rem 0 0.5rem;
+}
+
+.note-card {
+  position: relative;
+  width: min(100%, 17.5rem);
+  min-height: 13.5rem;
+  padding: 1.5rem 1.15rem 1.2rem;
+  border: 1.5px solid var(--ink);
+  border-radius: 0.35rem;
+  box-shadow: 3px 3px 0 rgba(29, 42, 46, 0.18);
+  transform: rotate(var(--tilt, 0deg));
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.note-card:hover {
+  transform: rotate(0deg) translateY(-4px) scale(1.02);
+  box-shadow: 5px 8px 0 rgba(29, 42, 46, 0.16);
+  z-index: 5;
+}
+
+.note-card-moss {
+  background: #2f6b4f;
+  color: #f4fff6;
+}
+
+.note-card-sky {
+  background: #3d7ea6;
+  color: #f2f9ff;
+}
+
+.note-card-orange {
+  background: #ff9500;
+  color: #1d2a2e;
+}
+
+.note-card-berry {
+  background: #c44536;
+  color: #fff5f2;
+}
+
+.note-card-cream {
+  background: #f6d9a8;
+  color: #1d2a2e;
+}
+
+.note-sticker {
+  position: absolute;
+  top: -0.85rem;
+  right: 0.85rem;
+  color: var(--ink);
+}
+
+.note-underline {
+  display: inline-block;
+  background-image: linear-gradient(transparent 70%, #ffb429 70%);
+}
+
+@media (min-width: 768px) {
+  .note-board {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 0;
+    padding-inline: 0.5rem;
+  }
+
+  .note-card {
+    width: 12.5rem;
+    min-height: 15rem;
+    margin-left: -1.1rem;
+  }
+
+  .note-card:first-child {
+    margin-left: 0;
+  }
+
+  .note-card:nth-child(1) {
+    z-index: 1;
+  }
+  .note-card:nth-child(2) {
+    z-index: 2;
+  }
+  .note-card:nth-child(3) {
+    z-index: 3;
+  }
+  .note-card:nth-child(4) {
+    z-index: 4;
+  }
+  .note-card:nth-child(5) {
+    z-index: 5;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -110,5 +209,10 @@ body {
   .hero-media,
   .float-badge {
     animation: none;
+  }
+
+  .note-card,
+  .note-card:hover {
+    transition: none;
   }
 }

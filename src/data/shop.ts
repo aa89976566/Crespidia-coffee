@@ -44,25 +44,40 @@ export const gallery = [
 export const neighbourNotes = [
   {
     text: "One of the best coffees in Crystal Palace. Great pastries and a chilled place to sit.",
-    about: "Google review",
+    about: "google review",
+    tone: "moss",
+    sticker: "coffee",
+    tilt: "-3deg",
   },
   {
     text: "We had pancakes, eggs on sourdough and French toast, then took home florentines, a blonde brownie and a coconut macaroon.",
-    about: "Brunch regulars",
+    about: "brunch regulars",
+    tone: "sky",
+    sticker: "brunch",
+    tilt: "2.5deg",
   },
   {
     text: "Francesca made a gluten free red velvet cake for our daughter. One of the best she has tasted.",
-    about: "Birthday cake order",
+    about: "birthday cake",
+    tone: "orange",
+    sticker: "cake",
+    tilt: "-2deg",
   },
   {
     text: "Dog friendly, and lovely to sit outside watching the world go by.",
-    about: "Park visitors",
+    about: "park visitors",
+    tone: "berry",
+    sticker: "heart",
+    tilt: "3deg",
   },
   {
     text: "Feels like a cozy front room full of vintage finds. Great lattes, and the home baked cakes are hard to leave behind.",
-    about: "Google guest",
+    about: "local guest",
+    tone: "cream",
+    sticker: "star",
+    tilt: "-1.5deg",
   },
-];
+] as const;
 
 export const goodToKnow = [
   "Homemade cakes baked on site",

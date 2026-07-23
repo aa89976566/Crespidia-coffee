@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { gallery, neighbourNotes, goodToKnow, social } from "@/data/shop";
 import { asset } from "@/lib/asset";
+import { NoteSticker } from "@/components/NoteSticker";
 
 export default function HomePage() {
   return (
@@ -121,17 +122,24 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-        <h2 className="font-display text-4xl text-ink">What neighbours say</h2>
-        <div className="mt-8 grid gap-5 md:grid-cols-2">
+        <h2 className="font-display text-4xl text-ink">
+          what neighbours <span className="note-underline">say</span>
+        </h2>
+        <p className="mt-2 max-w-xl text-ink-soft">
+          Little notes from people who pop in after the park.
+        </p>
+        <div className="note-board mt-8">
           {neighbourNotes.map((note) => (
             <blockquote
               key={note.text}
-              className="rounded-3xl border border-orange/40 bg-white p-5 shadow-[0_6px_0_#ffb42955]"
+              className={`note-card note-card-${note.tone}`}
+              style={{ ["--tilt" as string]: note.tilt }}
             >
-              <p className="text-base leading-relaxed text-ink">
+              <NoteSticker kind={note.sticker} />
+              <p className="text-sm font-semibold leading-relaxed sm:text-[0.95rem]">
                 &ldquo;{note.text}&rdquo;
               </p>
-              <footer className="mt-3 text-sm font-semibold text-orange-hot">
+              <footer className="mt-4 text-xs font-extrabold lowercase tracking-[0.08em] opacity-90">
                 {note.about}
               </footer>
             </blockquote>
