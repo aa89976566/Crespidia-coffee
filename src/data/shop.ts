@@ -84,17 +84,54 @@ export const neighbourNotes = [
   },
 ] as const;
 
-export const goodToKnow = [
-  "Homemade cakes baked on site",
-  "Breakfast and brunch favourites",
-  "Flat whites, matcha lavender, rose mint tea",
-  "Oat, soy, almond and coconut milk",
-  "Gluten free options if you ask",
-  "Dogs welcome",
-  "Outdoor seats when the weather is nice",
-  "Flowers, plants, bread and little gifts for sale some days",
-  "Evening drinks at the Anerley Road shop",
-];
+/** Real favourites named in Google / guest write-ups */
+export const fromTheShop = [
+  {
+    title: "brunch plates",
+    detail:
+      "Buttermilk pancakes, eggs on sourdough, brioche French toast with bacon and maple.",
+    image: "/photos/ta-0.jpg",
+    imageAlt: "Brunch at Crespidia",
+    tone: "sky",
+    tilt: "-2.5deg",
+  },
+  {
+    title: "cake tray",
+    detail:
+      "Florentines, blonde brownie, orange polenta, coconut macaroon, lemon cake and Victoria sponge.",
+    image: "/photos/bright-1.jpg",
+    imageAlt: "Cake slice",
+    tone: "orange",
+    tilt: "2deg",
+  },
+  {
+    title: "coffee and pots",
+    detail:
+      "Strong flat whites and lattes, matcha lavender, rose mint tea, plant milks if you ask.",
+    image: "/photos/bright-4.jpg",
+    imageAlt: "Coffee",
+    tone: "moss",
+    tilt: "-1.5deg",
+  },
+  {
+    title: "little shop bits",
+    detail:
+      "Vintage finds, flowers, plants and gifts around the room. Feels like a front room by the park.",
+    image: "/photos/ta-1.jpg",
+    imageAlt: "Inside Crespidia",
+    tone: "berry",
+    tilt: "3deg",
+  },
+  {
+    title: "family kitchen",
+    detail:
+      "Francesca and family. Turkish white cherry jam on the table. Gluten free celebration cakes if you ask.",
+    image: "/photos/crespidia-fb.jpg",
+    imageAlt: "Crespidia bakery",
+    tone: "cream",
+    tilt: "-2deg",
+  },
+] as const;
 
 export const locations = [
   {

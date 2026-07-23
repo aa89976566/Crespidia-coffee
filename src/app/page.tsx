@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { gallery, neighbourNotes, goodToKnow, social } from "@/data/shop";
+import { gallery, neighbourNotes, fromTheShop, social } from "@/data/shop";
 import { asset } from "@/lib/asset";
 
 export default function HomePage() {
@@ -60,23 +60,35 @@ export default function HomePage() {
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div className="max-w-2xl">
           <h2 className="font-display text-4xl text-ink">
-            Come for cake. Stay for a chat.
+            from the <span className="note-underline">shop</span>
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-ink-soft">
-            Francesca and the family keep the room bright and busy. Guests come
-            for brunch, lemon cake, Victoria sponge, strong coffee, Turkish jam
-            on the table, and a seat that does not rush you out.
+            Things neighbours keep ordering and talking about on Google. The
+            tray changes, so Instagram is best for what is out today.
           </p>
         </div>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {goodToKnow.map((item) => (
-            <p
-              key={item}
-              className="rounded-2xl bg-mist px-4 py-3 text-sm font-semibold text-ink"
+        <div className="note-board mt-8">
+          {fromTheShop.map((item) => (
+            <article
+              key={item.title}
+              className={`note-card note-card-${item.tone}`}
+              style={{ ["--tilt" as string]: item.tilt }}
             >
-              {item}
-            </p>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={asset(item.image)}
+                alt={item.imageAlt}
+                className="note-photo"
+                loading="lazy"
+              />
+              <h3 className="pr-10 text-lg font-extrabold lowercase tracking-tight">
+                {item.title}
+              </h3>
+              <p className="mt-3 text-sm font-semibold leading-relaxed opacity-95">
+                {item.detail}
+              </p>
+            </article>
           ))}
         </div>
       </section>
