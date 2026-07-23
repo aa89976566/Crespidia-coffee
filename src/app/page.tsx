@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { gallery, neighbourNotes, goodToKnow, social } from "@/data/shop";
 import { asset } from "@/lib/asset";
-import { NoteSticker } from "@/components/NoteSticker";
 
 export default function HomePage() {
   return (
@@ -135,7 +134,13 @@ export default function HomePage() {
               className={`note-card note-card-${note.tone}`}
               style={{ ["--tilt" as string]: note.tilt }}
             >
-              <NoteSticker kind={note.sticker} />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={asset(note.image)}
+                alt={note.imageAlt}
+                className="note-photo"
+                loading="lazy"
+              />
               <p className="text-sm font-semibold leading-relaxed sm:text-[0.95rem]">
                 &ldquo;{note.text}&rdquo;
               </p>
