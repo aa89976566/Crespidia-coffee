@@ -59,7 +59,7 @@ export default function VisitPage() {
         {locations.map((loc) => (
           <article
             key={loc.name}
-            className="rounded-[1.75rem] border-2 border-orange/50 bg-white p-6 shadow-[0_8px_0_#ffb42944]"
+            className="border-t-4 border-orange bg-white p-6"
           >
             <h2 className="font-display text-3xl text-ink">
               {loc.name}

@@ -53,39 +53,44 @@ export default function HomePage() {
       <section className="bg-yellow">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-5 text-sm font-extrabold text-ink sm:px-6">
           <p>About 4.9 on Google from neighbours</p>
-          <p>Dogs welcome, cakes baked here, two shops on Anerley</p>
+          <p>Near Crystal Palace station · two shops on Anerley</p>
         </div>
       </section>
 
+      {/* Product strips, closer to La Croissanterie category blocks */}
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-        <div className="max-w-2xl">
-          <h2 className="font-display text-4xl text-ink">
-            from the <span className="note-underline">shop</span>
-          </h2>
-          <p className="mt-4 text-lg leading-relaxed text-ink-soft">
-            Things neighbours keep ordering and talking about on Google. The
-            tray changes, so Instagram is best for what is out today.
-          </p>
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <h2 className="font-display text-4xl text-ink">On the menu</h2>
+            <p className="mt-2 max-w-xl text-ink-soft">
+              Favourites people name on Google. The cake tray changes, so check
+              Instagram for today.
+            </p>
+          </div>
+          <Link
+            href="/menu"
+            className="text-sm font-bold text-orange-hot underline underline-offset-4"
+          >
+            Full menu
+          </Link>
         </div>
 
-        <div className="note-board mt-8">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {fromTheShop.map((item) => (
-            <article
-              key={item.title}
-              className={`note-card note-card-${item.tone}`}
-              style={{ ["--tilt" as string]: item.tilt }}
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={asset(item.image)}
-                alt={item.imageAlt}
-                className="note-photo"
-                loading="lazy"
-              />
-              <h3 className="pr-10 text-lg font-extrabold lowercase tracking-tight">
+            <article key={item.title} className="group">
+              <div className="relative aspect-[4/3] overflow-hidden bg-cream-deep">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={asset(item.image)}
+                  alt={item.imageAlt}
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                  loading="lazy"
+                />
+              </div>
+              <h3 className="mt-4 font-display text-2xl text-ink">
                 {item.title}
               </h3>
-              <p className="mt-3 text-sm font-semibold leading-relaxed opacity-95">
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">
                 {item.detail}
               </p>
             </article>
@@ -99,8 +104,7 @@ export default function HomePage() {
             <div>
               <h2 className="font-display text-4xl text-ink">A peek inside</h2>
               <p className="mt-2 text-ink-soft">
-                Photos from guest visits and sunny bakery mornings. More on our
-                Instagram.
+                Guest photos and bakery mornings. More on Instagram.
               </p>
             </div>
             <a
@@ -113,11 +117,11 @@ export default function HomePage() {
             </a>
           </div>
 
-          <div className="mt-8 grid grid-cols-2 gap-3 md:grid-cols-4">
+          <div className="mt-8 grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-3">
             {gallery.map((shot) => (
               <figure
                 key={shot.src}
-                className="relative aspect-square overflow-hidden rounded-2xl bg-cream-deep"
+                className="relative aspect-square overflow-hidden bg-cream-deep"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -132,49 +136,49 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+      {/* Review list patterned after Bloom Cafe Crystal Palace */}
+      <section className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
         <h2 className="font-display text-4xl text-ink">
-          what neighbours <span className="note-underline">say</span>
+          Don&apos;t just take our word for it
         </h2>
-        <p className="mt-2 max-w-xl text-ink-soft">
-          Little notes from people who pop in after the park.
+        <p className="mt-3 text-ink-soft">
+          Read what neighbours say about us on Google.
         </p>
-        <div className="note-board mt-8">
+        <p className="mt-4 text-sm font-extrabold text-ink">
+          Crespidia · about 4.9 · Google reviews
+        </p>
+
+        <div className="mt-8 divide-y divide-ink/15 border-y border-ink/15">
           {neighbourNotes.map((note) => (
-            <blockquote
-              key={note.text}
-              className={`note-card note-card-${note.tone}`}
-              style={{ ["--tilt" as string]: note.tilt }}
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={asset(note.image)}
-                alt={note.imageAlt}
-                className="note-photo"
-                loading="lazy"
-              />
-              <p className="text-sm font-semibold leading-relaxed sm:text-[0.95rem]">
+            <blockquote key={note.text} className="py-6">
+              <p className="text-base leading-relaxed text-ink">
                 &ldquo;{note.text}&rdquo;
               </p>
-              <footer className="mt-4 text-xs font-extrabold lowercase tracking-[0.08em] opacity-90">
-                {note.about}
+              <footer className="mt-3 flex flex-wrap items-baseline gap-x-3 gap-y-1 text-sm">
+                <span className="font-bold text-ink">{note.name}</span>
+                <span className="text-ink-soft">{note.meta}</span>
               </footer>
             </blockquote>
           ))}
         </div>
+
+        <a
+          href={social.mapsRoad}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-8 inline-flex rounded-full bg-orange px-5 py-2.5 text-sm font-bold text-ink hover:bg-yellow"
+        >
+          More on Google Maps
+        </a>
       </section>
 
       <section className="bg-orange">
         <div className="mx-auto grid max-w-6xl gap-8 px-4 py-14 sm:px-6 md:grid-cols-2 md:items-center">
           <div>
-            <h2 className="font-display text-4xl text-ink">
-              Weekends get lively
-            </h2>
+            <h2 className="font-display text-4xl text-ink">Weekends</h2>
             <p className="mt-4 text-lg text-ink/90">
-              Saturdays and Sundays fill up with brunch, parkrun stop offs and
-              takeaway cakes. We do not post a big event calendar here. For
-              specials, cake orders and last minute opening notes, Instagram is
-              the best place.
+              Brunch, parkrun stop offs and cakes to take home. For specials and
+              opening notes, Instagram is the place.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a
@@ -183,7 +187,7 @@ export default function HomePage() {
                 rel="noreferrer"
                 className="rounded-full bg-ink px-5 py-2.5 text-sm font-bold text-cream hover:bg-ink-soft"
               >
-                Follow on Instagram
+                Instagram
               </a>
               <a
                 href={social.facebook}
@@ -195,7 +199,7 @@ export default function HomePage() {
               </a>
             </div>
           </div>
-          <div className="relative min-h-72 overflow-hidden rounded-[2rem]">
+          <div className="relative min-h-72 overflow-hidden">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={asset("/photos/ta-0.jpg")}
@@ -208,11 +212,11 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-        <div className="overflow-hidden rounded-[2rem] bg-ink px-6 py-12 text-cream sm:px-10">
-          <h2 className="font-display text-4xl">Two bright spots on Anerley</h2>
+        <div className="bg-ink px-6 py-12 text-cream sm:px-10">
+          <h2 className="font-display text-4xl">Two shops on Anerley</h2>
           <p className="mt-3 max-w-2xl text-cream/85">
-            Anerley Hill for the park side cafe. Anerley Road for coffee through
-            the day and drinks later. Same baking, same welcome.
+            Anerley Hill by the park. Anerley Road for coffee through the day
+            and drinks later.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link

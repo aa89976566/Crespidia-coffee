@@ -41,97 +41,66 @@ export const gallery = [
   },
 ];
 
+/** Short Google-style guest notes shown like Bloom Cafe reviews */
 export const neighbourNotes = [
   {
     text: "One of the best coffees in Crystal Palace. Great pastries and a chilled place to sit.",
-    about: "google review",
-    tone: "moss",
-    image: "/photos/bright-4.jpg",
-    imageAlt: "Coffee cup",
-    tilt: "-3deg",
+    name: "Local guest",
+    meta: "Google review",
   },
   {
     text: "We had pancakes, eggs on sourdough and French toast, then took home florentines, a blonde brownie and a coconut macaroon.",
-    about: "brunch regulars",
-    tone: "sky",
-    image: "/photos/ta-0.jpg",
-    imageAlt: "Brunch plate at Crespidia",
-    tilt: "2.5deg",
+    name: "Brunch visit",
+    meta: "Google review",
   },
   {
     text: "Francesca made a gluten free red velvet cake for our daughter. One of the best she has tasted.",
-    about: "birthday cake",
-    tone: "orange",
-    image: "/photos/bright-1.jpg",
-    imageAlt: "Cake slice",
-    tilt: "-2deg",
+    name: "Birthday order",
+    meta: "Google review",
   },
   {
     text: "Dog friendly, and lovely to sit outside watching the world go by.",
-    about: "park visitors",
-    tone: "berry",
-    image: "/photos/ta-1.jpg",
-    imageAlt: "Inside Crespidia near the park",
-    tilt: "3deg",
+    name: "Park walk",
+    meta: "Google review",
   },
   {
     text: "Feels like a cozy front room full of vintage finds. Great lattes, and the home baked cakes are hard to leave behind.",
-    about: "local guest",
-    tone: "cream",
-    image: "/photos/crespidia-fb.jpg",
-    imageAlt: "Crespidia bakery room",
-    tilt: "-1.5deg",
+    name: "Neighbour",
+    meta: "Google review",
   },
-] as const;
+];
 
-/** Real favourites named in Google / guest write-ups */
+/** Menu strips in the spirit of La Croissanterie product blocks */
 export const fromTheShop = [
   {
-    title: "brunch plates",
+    title: "Brunch",
     detail:
       "Buttermilk pancakes, eggs on sourdough, brioche French toast with bacon and maple.",
     image: "/photos/ta-0.jpg",
     imageAlt: "Brunch at Crespidia",
-    tone: "sky",
-    tilt: "-2.5deg",
   },
   {
-    title: "cake tray",
+    title: "Cakes",
     detail:
-      "Florentines, blonde brownie, orange polenta, coconut macaroon, lemon cake and Victoria sponge.",
+      "Florentines, blonde brownie, orange polenta, coconut macaroon, lemon cake, Victoria sponge.",
     image: "/photos/bright-1.jpg",
     imageAlt: "Cake slice",
-    tone: "orange",
-    tilt: "2deg",
   },
   {
-    title: "coffee and pots",
+    title: "Coffee and tea",
     detail:
-      "Strong flat whites and lattes, matcha lavender, rose mint tea, plant milks if you ask.",
+      "Flat whites and lattes, matcha lavender, rose mint tea. Oat and other plant milks if you ask.",
     image: "/photos/bright-4.jpg",
     imageAlt: "Coffee",
-    tone: "moss",
-    tilt: "-1.5deg",
   },
   {
-    title: "little shop bits",
+    title: "Around the room",
     detail:
-      "Vintage finds, flowers, plants and gifts around the room. Feels like a front room by the park.",
+      "Vintage bits, flowers and gifts. Turkish white cherry jam on the table. Dogs welcome outside.",
     image: "/photos/ta-1.jpg",
     imageAlt: "Inside Crespidia",
-    tone: "berry",
-    tilt: "3deg",
   },
-  {
-    title: "family kitchen",
-    detail:
-      "Francesca and family. Turkish white cherry jam on the table. Gluten free celebration cakes if you ask.",
-    image: "/photos/crespidia-fb.jpg",
-    imageAlt: "Crespidia bakery",
-    tone: "cream",
-    tilt: "-2deg",
-  },
-] as const;
+];
 
 export const locations = [
   {
