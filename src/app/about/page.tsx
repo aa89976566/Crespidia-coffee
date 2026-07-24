@@ -49,8 +49,8 @@ export default function AboutPage() {
           <div className="relative h-72 overflow-hidden rounded-xl shadow-[0_8px_0_#ffb42944] ring-4 ring-white md:h-80">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={asset("/photos/crespidia-fb.jpg")}
-              alt="Crespidia Coffee Bakery"
+              src={asset("/photos/ig-counter.jpg")}
+              alt="Crespidia Coffee Bakery counter"
               className="h-full w-full object-cover"
               loading="lazy"
             />

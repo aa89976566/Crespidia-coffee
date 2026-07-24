@@ -34,21 +34,17 @@ Tone: happy bakery, rounded CTAs, clear “how it works” loyalty steps, produc
 
 ## Imagery and live sources
 
-- Instagram: [instagram.com/crespidia](https://www.instagram.com/crespidia/) (specials, weekend notes; no fixed public event calendar)
+- Instagram: [instagram.com/crespidia](https://www.instagram.com/crespidia/) (login-walled for scraping; site links the feed and uses real shop photos)
+- Real shop / guest photos in `public/photos/ig-*.jpg` (counter, brunch bowl, latte, cake, flowers, juices) plus earlier TripAdvisor downloads
 - Facebook: [facebook.com/crespidialondon](https://www.facebook.com/crespidialondon/)
 - Google Maps Coffee & Bar: [maps.app.goo.gl/vqtXvDjrXFaWsiWg6](https://maps.app.goo.gl/vqtXvDjrXFaWsiWg6)
-- Guest photos in `public/photos/ta-0.jpg`, `ta-1.jpg` (TripAdvisor listings)
-- Facebook profile image: `public/photos/crespidia-fb.jpg`
-- Bright bakery fillers: `public/photos/bright-0.jpg` to `bright-9.jpg` (Unsplash) until more shop photos are available
 
 ### Public facts used on the site
 
-- Rating around 4.8 to 4.9 on Google
-- Homemade cakes (lemon, Victoria sponge, florentine, blonde brownie, orange polenta, coconut macaroon, GF celebration cakes)
-- Breakfast/brunch: pancakes, eggs on sourdough, French toast
-- Drinks: coffee, matcha lavender, rose mint tea, plant milks; cocktails at Anerley Road
-- Dog friendly, outdoor seating, flowers/plants/gifts
-- Weekends busy with brunch and park stop offs; Instagram for day to day specials
+- Chalkboard categories from the counter: bowls, eggs, house sandwiches, lunch salads
+- Homemade cakes and celebration cakes
+- Vintage china, flowers and gifts in the room
+- Weekends busy with brunch; Instagram for day to day specials
 
 ## Fonts
 

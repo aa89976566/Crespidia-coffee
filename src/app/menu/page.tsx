@@ -8,7 +8,21 @@ export const metadata: Metadata = {
 
 const sections = [
   {
-    title: "Breakfast",
+    title: "Bowls",
+    note: "On the board by the coffee machine.",
+    items: [
+      {
+        name: "Coconut porridge",
+        detail: "Ask for today's toppings",
+      },
+      {
+        name: "Acai bowl",
+        detail: "Fresh fruit and almond butter",
+      },
+    ],
+  },
+  {
+    title: "Breakfast and brunch",
     note: "Through the morning. Popular after park walks.",
     items: [
       {
@@ -17,15 +31,15 @@ const sections = [
       },
       {
         name: "Eggs on sourdough",
-        detail: "Scrambled or poached, bacon if you want",
+        detail: "Scrambled, poached or fried",
       },
       {
         name: "Brioche French toast",
         detail: "Bacon, banana and maple",
       },
       {
-        name: "Sourdough sandwiches",
-        detail: "Ask what is on today",
+        name: "House sandwiches",
+        detail: "Including Croque Monsieur. Ask what is on today",
       },
     ],
   },
@@ -50,6 +64,7 @@ const sections = [
     note: "Oat, soy, almond or coconut milk available.",
     items: [
       { name: "Flat white, latte, cappuccino", detail: "Strong and smooth" },
+      { name: "Fresh juices", detail: "Orange and cooler jars when in season" },
       { name: "Matcha lavender", detail: "Soft floral note" },
       { name: "Rose mint tea", detail: "Loose leaf in a pot" },
       {
