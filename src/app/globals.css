@@ -99,6 +99,162 @@ body {
   animation: float-y 4s ease-in-out infinite;
 }
 
+/* Scrapbook board: tilted overlapping cards for bakery need-to-know */
+.need-board-wrap {
+  border-radius: 1.5rem;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255, 180, 64, 0.28), transparent 42%),
+    radial-gradient(circle at 88% 10%, rgba(255, 229, 102, 0.35), transparent 40%),
+    var(--mist);
+  padding: 1.75rem 1rem 2.25rem;
+}
+
+.need-underline {
+  display: inline-block;
+  background-image: linear-gradient(transparent 68%, #ffb429 68%, #ffb429 88%, transparent 88%);
+}
+
+.need-board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem 1rem;
+  padding-top: 1.25rem;
+}
+
+.need-card {
+  position: relative;
+  width: min(100%, 16.5rem);
+  min-height: 15.5rem;
+  padding: 1.65rem 1.15rem 1.25rem;
+  border: 1.5px solid var(--ink);
+  border-radius: 0.85rem;
+  box-shadow: 3px 4px 0 rgba(29, 42, 46, 0.16);
+  transform: rotate(var(--tilt, 0deg));
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.need-card:hover {
+  transform: rotate(0deg) translateY(-5px) scale(1.02);
+  box-shadow: 5px 9px 0 rgba(29, 42, 46, 0.14);
+  z-index: 6;
+}
+
+.need-card-moss {
+  background: #2f6b4f;
+  color: #f4fff6;
+}
+
+.need-card-sky {
+  background: #3d7ea6;
+  color: #f3f9ff;
+}
+
+.need-card-orange {
+  background: #ff9500;
+  color: #1d2a2e;
+}
+
+.need-card-berry {
+  background: #c44536;
+  color: #fff6f3;
+}
+
+.need-card-cream {
+  background: #f6d9a8;
+  color: #1d2a2e;
+}
+
+.need-photo {
+  position: absolute;
+  top: -1.05rem;
+  right: 0.75rem;
+  width: 3.35rem;
+  height: 3.35rem;
+  object-fit: cover;
+  border-radius: 9999px;
+  border: 1.5px solid var(--ink);
+  box-shadow: 2px 2px 0 #1d2a2e;
+  background: var(--cream);
+}
+
+.need-card h3 {
+  font-family: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-transform: lowercase;
+  padding-right: 2.75rem;
+}
+
+.need-card ul {
+  margin-top: 0.9rem;
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.need-card li {
+  position: relative;
+  padding-left: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.35;
+  opacity: 0.96;
+}
+
+.need-card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45em;
+  width: 0.4rem;
+  height: 0.4rem;
+  background: currentColor;
+  opacity: 0.55;
+  transform: rotate(45deg);
+}
+
+@media (min-width: 900px) {
+  .need-board {
+    flex-wrap: nowrap;
+    gap: 0;
+    align-items: stretch;
+    justify-content: center;
+    padding-inline: 0.75rem;
+  }
+
+  .need-card {
+    width: 12.4rem;
+    min-height: 16.5rem;
+    margin-left: -1.15rem;
+  }
+
+  .need-card:first-child {
+    margin-left: 0;
+  }
+
+  .need-card:nth-child(1) {
+    z-index: 1;
+  }
+  .need-card:nth-child(2) {
+    z-index: 2;
+  }
+  .need-card:nth-child(3) {
+    z-index: 3;
+  }
+  .need-card:nth-child(4) {
+    z-index: 4;
+  }
+  .need-card:nth-child(5) {
+    z-index: 5;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -110,5 +266,10 @@ body {
   .hero-media,
   .float-badge {
     animation: none;
+  }
+
+  .need-card,
+  .need-card:hover {
+    transition: none;
   }
 }

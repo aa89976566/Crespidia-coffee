@@ -33,37 +33,78 @@ export const gallery = [
   },
 ];
 
-/** Photo cards tied to what the shop posts and serves */
-export const fromTheShop = [
+/**
+ * Scrapbook "need to know" cards.
+ * Focused on what cafe visitors ask first: open? where? what to eat? cakes? practical tips.
+ */
+export const needToKnow = [
   {
-    title: "Brunch bowls and eggs",
-    detail:
-      "Coconut and acai bowls, eggs on sourdough, pancakes and French toast. Written up on the board by the machine.",
+    title: "hours",
+    tone: "moss",
+    tilt: "-3deg",
+    image: "/photos/ig-counter.jpg",
+    imageAlt: "Crespidia counter",
+    href: "/visit/",
+    points: [
+      "Hill: Tue to Sat 9 to 5, Sun 10 to 5",
+      "Road: from 8am, later evenings Wed to Sun",
+      "Monday and holidays: check Instagram",
+    ],
+  },
+  {
+    title: "find us",
+    tone: "sky",
+    tilt: "2.5deg",
+    image: "/photos/ig-interior.jpg",
+    imageAlt: "Inside Crespidia",
+    href: "/visit/",
+    points: [
+      "48 Anerley Hill by the park",
+      "51-53 Anerley Road for coffee and bar",
+      "Short walk from Crystal Palace station",
+    ],
+  },
+  {
+    title: "eat and drink",
+    tone: "orange",
+    tilt: "-2deg",
     image: "/photos/ig-brunch-bowl.jpg",
-    imageAlt: "Brunch bowl at Crespidia",
+    imageAlt: "Brunch bowl",
+    href: "/menu/",
+    points: [
+      "Brunch bowls, eggs, pancakes, French toast",
+      "Flat whites, juices, matcha, rose mint tea",
+      "Plant milks if you ask",
+    ],
   },
   {
-    title: "Coffee in proper cups",
-    detail:
-      "Flat whites and lattes with heart art, often in vintage china. Strong and smooth.",
-    image: "/photos/ig-latte.jpg",
-    imageAlt: "Latte at Crespidia",
+    title: "cakes",
+    tone: "berry",
+    tilt: "3deg",
+    image: "/photos/ig-celebration-cake.jpg",
+    imageAlt: "Celebration cake",
+    href: "/menu/",
+    points: [
+      "Homemade slices on the tray every day",
+      "Celebration cakes: ask Francesca",
+      "Gluten free possible when you order",
+    ],
   },
   {
-    title: "Cake with your coffee",
-    detail:
-      "Homemade slices and celebration cakes from the kitchen. Ask Francesca for gluten free when you need it.",
-    image: "/photos/ig-coffee-cake.jpg",
-    imageAlt: "Coffee and cake",
-  },
-  {
-    title: "Flowers and little finds",
-    detail:
-      "Dried flowers, gifts and vintage bits around the room. Same warm shop you see on Instagram.",
+    title: "good to know",
+    tone: "cream",
+    tilt: "-1.5deg",
     image: "/photos/ig-flowers.jpg",
-    imageAlt: "Flowers at Crespidia",
+    imageAlt: "Flowers in the shop",
+    href: "https://www.instagram.com/crespidia/",
+    external: true,
+    points: [
+      "Dogs welcome, outdoor seats when warm",
+      "Today's tray and specials on Instagram",
+      "Paper stamp card at the counter",
+    ],
   },
-];
+] as const;
 
 export const neighbourNotes = [
   {
@@ -83,18 +124,6 @@ export const neighbourNotes = [
     name: "Birthday order",
     meta: "Google review",
     image: "/photos/ig-celebration-cake.jpg",
-  },
-  {
-    text: "Dog friendly, and lovely to sit outside watching the world go by.",
-    name: "Park walk",
-    meta: "Google review",
-    image: "/photos/ig-counter.jpg",
-  },
-  {
-    text: "Feels like a cozy front room full of vintage finds. Great lattes, and the home baked cakes are hard to leave behind.",
-    name: "Neighbour",
-    meta: "Google review",
-    image: "/photos/ig-flowers.jpg",
   },
 ];
 
